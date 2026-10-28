@@ -21,6 +21,7 @@
 
       th, td {
         border: 1px solid #222;
+        text-align: center;
         width: 300px;
         height: 40px;
       }

@@ -9,6 +9,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Book {
     private int id;
-    private String bookNmae;
+    private String bookName;
     private int price;
+
+    public Book(Book book){
+        this.id = book.id;
+        this.bookName = book.bookName;
+        this.price = book.price;
+    }
+
 }
