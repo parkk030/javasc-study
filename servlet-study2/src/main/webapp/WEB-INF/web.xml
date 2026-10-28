@@ -3,4 +3,25 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <filter>
+        <filter-name>utf8EncodingFilter</filter-name>
+        <filter-class>com.korai.servletstudy2.filter.Utf8EncodingFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>utf8EncodingFilter</filter-name>
+        <url-pattern>/api/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>corsFilter</filter-name>
+        <filter-class>com.korai.servletstudy2.filter.CorsFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>corsFilter</filter-name>
+        <url-pattern>/api/*</url-pattern>
+    </filter-mapping>
+
+
 </web-app>

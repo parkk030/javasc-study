@@ -7,14 +7,15 @@ import java.util.List;
 
 public class CarRepository {
     private static CarRepository instance;
-    private static List<Car> cars;
-    private int lastId;
+    List<Car> cars;
+     int lastId;
 
     private CarRepository(){
         cars = new ArrayList<>();
+        lastId=1;
         insert(new Car(0,"씽씽카",30000,"삼성"));
         insert(new Car(0,"붕붕카",30000,"현대"));
-        lastId=1;
+
     }
 
 
@@ -26,7 +27,7 @@ public class CarRepository {
     }
 
     public void insert(Car car){
-        car.setId(lastId);
+        car.setId(lastId++);
         cars.add(car);
     }
 

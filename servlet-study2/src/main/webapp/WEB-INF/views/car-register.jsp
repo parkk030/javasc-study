@@ -43,7 +43,7 @@
         }
     }
     function handleRegistButtonOnClick(e){
-        fetch("http://192.168.2.12:8080/api/car",{
+        fetch("http://localhost:8080/api/car",{
             method:"POST",
             body: JSON.stringify(car),
             headers:{
