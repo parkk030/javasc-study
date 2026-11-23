@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.korai.study03.domain.coupon.mapper.CouponMapper">
+
+    <insert id="insert">
+        insert into coupons
+        values ( default, #{code},#{name},#{discountType},#{discountValue},#{maxDiscount},#{minOrderAmount},#{validDays},#{isActive},now())
+    </insert>
+
+    <select id="findAll" resultType="Coupon">
+        select
+        *
+        from
+        coupons
+        where
+        coupon_id = #{couponId}
+
+    </select>
+
+</mapper>
