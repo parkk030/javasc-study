@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item {
+            width: 120px;
+            height: 40px;
+            background-color: lightgray;
+        }
+
+        .item:not(.soldout){
+            background-color:  lightgreen;
+        }
+
+        button:enabled{
+            background-color: purple;
+            color: #fff;
+        }
+
+        button:disabled{
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="products">
+        <div class="item">사과</div>
+        <div class="item soldout">배</div>
+        <div class="item">포도</div>
+        <div class="item soldout">딸기</div>
+    </div>
+    <div class="buttons">
+        <button>장바구니</button>
+        <button disabled>품절</button>
+    </div>
+</body>
+
+</html>

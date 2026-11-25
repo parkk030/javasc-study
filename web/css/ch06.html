@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div>:only-child{
+            color: red;
+        }
+
+        div>h1:only-of-type{
+            color: blue;
+        }
+
+        div>:first-child{
+            color:aqua;
+        }
+
+        div>:last-child{
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>1</h1>
+        <h1>2</h1>
+    </div>
+    <div>
+        <h1>3</h1>
+    </div>
+    <div>
+        <p>4</p>
+    </div>
+</body>
+
+</html>

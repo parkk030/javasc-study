@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            color: red;
+        }
+
+        .active +li{
+            text-decoration: underline
+        }
+
+        .active ~li{
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <li>홈</li>
+        <li class="active">소개</li>
+        <li>상품</li>
+        <li>게시판</li>
+        <li>문의</li>
+    </ul>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1>input[type] {
+            color: red;
+        }
+
+.box6>input[type=checkbox]+label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #222;
+    box-sizing: border-box;
+    border: #222;
+    border-radius: 0%;
+    width: 50px;
+    height: 50px;
+}
+
+
+        .box1>input[type="checkbox"]:checked+label>div{
+            box-sizing: border-box;
+            border-radius: 50%;
+            width: 43px;
+            height: 43px;
+            background-color: red;
+        }
+
+.box7>div{
+    width: 50px;
+    height: 50px;
+    background-color: grey;
+}
+
+.box7>div:not(.not1){
+    background-color: blue;
+}
+
+.box8>button:hover+div::before{
+    content: "앞부분";
+}
+
+.box8>button:active+div::after{
+    content: "뒷부분";
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <input type="text">
+        <input type="password">
+        <input type="text">
+        <input>
+    </div>
+
+    <div class="box6">
+        <input type="checkbox" id="1">
+        <label for="1">
+            <div></div>
+        </label>
+    </div>
+
+<div class="box7">
+    <div></div>
+    <div class="not1"></div>
+    <div></div>
+    <div class="not1"></div>
+</div>
+
+
+
+<div class="box8">
+    <button>클릭</button>
+    <div>내용</div>
+</div>
+
+
+</body>
+</html>

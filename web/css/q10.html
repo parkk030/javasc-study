@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #terms {
+            display: none;
+        }
+
+        .agree label {
+            display: block;
+            border: 2px solid #222;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            cursor: pointer
+        }
+
+        #terms:checked + label div{
+            border: 4px;
+            width: 40px;
+            height: 40px;
+            background-color: royalblue;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tip button:hover + div::before{
+            content: "💡 ";
+        }
+
+        .tip button:active + div::after{
+            content: " (필수)";
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="agree">
+        <input type="checkbox" id="terms">
+        <label for="terms">
+            <div></div>
+        </label>
+        <span>이용약관에 동의합니다</span>
+    </div>
+    <div class="tip">
+        <button>도움말</button>
+        <div>약관 안내</div>
+    </div>
+
+</body>
+
+</html>

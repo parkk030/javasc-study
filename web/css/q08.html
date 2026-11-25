@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .links a:link{
+            color: green;
+        }
+
+        .links a:visited{
+            color: gray;
+
+        }
+
+        .links a:hover{
+            color: orange;
+        }
+
+        .links a:active{
+            color: red;
+        }
+
+        .form input[type="text"]:focus{
+            background-color: lightyellow;
+            border: 2px solid orange;
+        }
+
+        .form button:hover{
+            background-color: #222;
+            color: #fff;
+        }
+
+        .form button:active{
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="links">
+        <a href="https://naver.com">네이버</a>
+        <a href="https://daum.net">다음</a>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="이름을 입력하세요">
+        <button>확인</button>
+    </div>
+
+</body>
+
+</html>
