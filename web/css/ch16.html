@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        .box{
+            text-align: center;
+            color: aliceblue;
+            font-weight: 600;
+            width: 100px;
+            height: 50px;
+            background-color: black;
+
+        }
+        .fbox1{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+            border: 1px solid red;
+            width: 600px;
+            height: 400px;
+            padding: 20px;
+            
+        }
+
+        .fbox1>.box:nth-of-type(2n){
+            align-self: flex-start;
+            order: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fbox1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+         <div class="box">8</div>
+          <div class="box">9</div>
+           <div class="box">10</div>
+            <div class="box">11</div>
+             <div class="box">12</div>
+              <div class="box">13</div>
+
+ 
+
+    </div>
+
+</body>
+
+</html>

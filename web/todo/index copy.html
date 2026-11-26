@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --bg: #e9edf5;
+            --card: #ffffff;
+            --ink: #1f2937;
+            --muted: #8a94a6;
+            --line: #e3e8f0;
+            --accent: #4f46e5;
+            --accent-soft: #eef0ff;
+            --danger: #e5484d;
+            --danger-soft: #fdecec;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+        }
+
+        .app {
+            width: 400px;
+            height: 600px;
+            max-height: 96vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: var(--card);
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(31, 41, 55, 0.12);
+        }
+
+        /* 상단 입력 줄 */
+        .top {
+            display: flex;
+            gap: 8px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            min-width: 0;
+            height: 44px;
+            padding: 0 14px;
+            font: inherit;
+            color: var(--ink);
+            background: #f6f8fb;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            outline: none;
+            transition: border-color .15s, box-shadow .15s, background .15s;
+        }
+
+        input[type="text"]:focus {
+            background: #fff;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-soft);
+        }
+
+        button {
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            border-radius: 12px;
+            transition: background .15s, color .15s, transform .1s;
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+
+        button:focus-visible {
+            outline: 3px solid var(--accent-soft);
+            outline-offset: 1px;
+        }
+
+        .reset {
+            padding: 0 16px;
+            color: var(--ink);
+            background: #eef1f6;
+        }
+
+        .reset:hover {
+            background: #e1e6ef;
+        }
+
+        .main-btn {
+            height: 48px;
+            color: #fff;
+            background: var(--accent);
+        }
+
+        .main-btn:hover {
+            background: #4338ca;
+        }
+
+        /* 목록 */
+        .list {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-right: 4px;
+            overflow-y: auto;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 8px 8px 14px;
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            transition: border-color .15s, background .15s;
+        }
+
+        .item:hover {
+            border-color: #cfd6e4;
+        }
+
+        .item input[type="text"] {
+            height: 36px;
+            background: transparent;
+            border-color: transparent;
+        }
+
+        .item input[type="text"]:hover {
+            background: #f6f8fb;
+        }
+
+        .item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin: 0;
+            accent-color: var(--accent);
+            cursor: pointer;
+        }
+
+        /* 체크하면 줄 전체가 흐려지고 글자에 취소선 */
+        .item:has(input[type="checkbox"]:checked) {
+            background: #f9fafc;
+        }
+
+        .item:has(input[type="checkbox"]:checked) input[type="text"] {
+            color: var(--muted);
+            text-decoration: line-through;
+        }
+
+        .del {
+            height: 36px;
+            padding: 0 12px;
+            color: var(--muted);
+            background: transparent;
+        }
+
+        .del:hover {
+            color: var(--danger);
+            background: var(--danger-soft);
+        }
+
+        /* 스크롤바 */
+        .list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .list::-webkit-scrollbar-thumb {
+            background: #d5dbe7;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="app">
+        <div class="top">
+            <input type="text" placeholder="내용을 입력하세요">
+            <button class="reset">초기화</button>
+        </div>
+
+        <button class="main-btn">버튼</button>
+
+        <div class="list">
+            <div class="item">
+                <input type="checkbox">
+                <input type="text" class="write">
+                <button class="del">삭제</button>
+            </div>
+            <div class="item">
+                <input type="checkbox">
+                <input type="text" class="write">
+                <button class="del">삭제</button>
+            </div>
+            <div class="item">
+                <input type="checkbox">
+                <input type="text" class="write">
+                <button class="del">삭제</button>
+            </div>
+            <div class="item">
+                <input type="checkbox">
+                <input type="text" class="write">
+                <button class="del">삭제</button>
+            </div>
+            <div class="item">
+                <input type="checkbox">
+                <input type="text" class="write">
+                <button class="del">삭제</button>
+            </div>
+            <div class="item">
+                <input type="checkbox">
+                <input type="text" class="write">
+                <button class="del">삭제</button>
+            </div>
+            <div class="item">
+                <input type="checkbox">
+                <input type="text" class="write">
+                <button class="del">삭제</button>
+            </div>
+            <div class="item">
+                <input type="checkbox">
+                <input type="text" class="write">
+                <button class="del">삭제</button>
+            </div>
+            <div class="item">
+                <input type="checkbox">
+                <input type="text" class="write">
+                <button class="del">삭제</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const list = document.querySelector(".list");
+
+        // 삭제 버튼 하나하나가 아니라 목록 전체에 이벤트를 걸어서 처리
+        list.addEventListener("click", (e) => {
+            if (e.target.classList.contains("del")) {
+                e.target.closest(".item").querySelector(".write").value = "";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

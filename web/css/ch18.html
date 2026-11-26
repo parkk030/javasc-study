@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p-box{
+            box-sizing: border-box;
+            border: 1px solid #222;
+            background-color: #eee;
+            display:flex;
+            width: 300px;
+            height: 100px;
+            align-items: stretch;
+        }
+
+        .box{
+            box-sizing: border-box;
+            border: 1px solid #222;
+            width: 60px;
+            
+            background-color: #fff;
+        }
+
+        .c-box1{
+            flex-grow: 2;
+        }
+        .c-box2{
+            flex-grow: 1;
+        }
+
+        .c-box3{
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="p-box">
+        <div class="box c-box1"></div>
+        <div class="box c-box2"></div>
+        <div class="box c-box3"></div>
+
+
+
+    </div>
+    
+</body>
+</html>
